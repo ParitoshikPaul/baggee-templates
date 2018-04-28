@@ -1,0 +1,66 @@
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin border($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+
+@mixin linear-gradient-b($args...) {
+    background-image: -o-linear-gradient($args); 
+    background-image: -moz-linear-gradient($args); 
+    background-image: -webkit-linear-gradient($args); 
+    background-image: linear-gradient($args); 
+}
+
+@mixin no-margin-padding{
+    padding: 0px;
+    margin: 0px;
+}
+
+@mixin no-margin{
+    margin: 0px;
+}
+
+@mixin no-padding{
+    padding: 0px;
+}
+
+@mixin alpha-attribute($attribute, $color, $background) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $background, $percent);
+    #{$attribute}: $solid-color;
+    #{$attribute}: $color;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}

@@ -1,0 +1,50 @@
+//Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900');
+
+//Font awesome fonts
+@import "vendor/fontawesome/scss/fontawesome.scss";
+@import "vendor/fontawesome/scss/fa-solid";
+@import "vendor/fontawesome/scss/fa-regular";
+@import "vendor/fontawesome/scss/fa-brands";
+
+//Base
+@import "base/mixins";
+@import "base/base";
+
+//Components
+@import "components/navigation";
+
+//Layouts
+@import "layout/header";
+@import "layout/footer";
+
+
+.formarea{
+    @include margin ( $px_25, null, $px_25, null );
+    .nav{
+        flex-wrap: inherit;
+        overflow: hidden;
+        overflow-x: auto;
+        text-align: center;        
+        a{
+            font-size: $px_12;
+            color: $dark-gray;
+            border:$px_1 solid $light-gray !important; 
+            @include padding ( $px_5, $px_18, $px_5, $px_18 );
+            @include border-radius ($px_3);
+            @include margin ( null, $px_5, $px_5, null );
+            img{
+                height: $px_25;
+            }
+        }
+        a.active{
+            color: $theme-blue;
+        }
+    }
+}
+.banner{
+    @include margin ( $px_25, null, $px_25, null );
+    img{
+       width: $full-width;
+    }
+}

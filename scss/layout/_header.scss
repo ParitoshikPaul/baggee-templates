@@ -1,0 +1,195 @@
+//Main Header
+
+nav.navbar{
+    @include no-margin-padding;
+    @include alpha-attribute('background', rgba($white, 0.9), $white);
+    @include border('bottom', $px_1, solid, $light-gray);  
+        .navbar-brand{
+            margin-left: 1rem;
+            @include border('right', $px_1, solid, $light-gray);        
+            @include padding ($px_10, $px_15, $px_10, null);
+            box-shadow: 3px -1px $px_4 rgba(0,0,0,0.1);
+            img{
+                height:$px_45;
+            }
+        }
+}
+
+//Modal login register
+
+.modal{
+    @include alpha-attribute('background', rgba($theme-blue, 0.2), $white);
+    padding: 0px !important;
+}
+.modal-dialog{
+    max-width: 700px;
+    .modal-content{
+        @include border-radius(0px);
+        box-shadow: none;
+        border: none;
+    }
+    button.close{
+        @include position(absolute, $top: 0, $right: 0);
+        background: $theme-green;
+        z-index: 999;
+        @include padding (null, $px_4, null, $px_4);
+        opacity: 1;
+        font-size:$px_24;
+        &:hover{
+            color: $white;
+        }
+    }
+}
+#loginregister{
+.logreg-detail{
+    padding: $px_20;
+    @include position(relative);
+    img{
+        max-width: $full-width;
+        @include margin (null, null, $px_30, null);
+    }
+    .btn{
+        width: $full-width;
+        color: $white;
+        @include margin ($px_20, null, null, null);
+        line-height: $px_30;
+        i{
+
+            background:white;            
+            @include border-radius ($px_30);
+            height: $px_30;
+            width: $px_30;
+            float: left;
+            line-height: $px_30;
+        
+        }
+        &:hover{
+            opacity: 0.89;
+        }
+    }
+    .fb{
+        background:#4267B2;
+        i{
+            color: #4267B2;
+        }
+    }
+    .gp{
+        background:#D4453D;
+        i{
+            color: #D4453D;
+        }
+    }
+    .nav-tabs{
+        @include rotate(-90deg);
+        @include position(absolute, $top: 70px, $right: -96px);
+        z-index: 9;
+        li{
+            margin: 0;
+        }
+        .nav-link{
+            @include padding ($px_2, $px_14, $px_2, $px_14);
+            color: $theme-blue;
+            background: $theme-green;
+            border: none;
+        }
+        .nav-link.active{
+            color: $white;
+            background: $theme-blue;
+        }     
+    }
+}
+    .tab-content{        
+        .tab-pane{
+            padding: $px_30;
+            background: $theme-blue;
+            z-index: 9;
+            @include position(relative);
+        }
+    }
+    form {
+        label{
+            color: $white;
+        }
+        input{
+            width: $full-width;
+            background: $white;
+            padding: $px_10;
+            border: none;
+            color: $med-gray;
+        }
+        input[type='checkbox']{
+            width: auto;
+        }
+        input[type='submit']{
+            background: $theme-green;
+            color: $theme-blue;
+            cursor: pointer;
+            &:hover{
+                color: $white;
+            }
+        }
+        .link-check{
+            a{
+                color: $theme-green;
+            }
+            label{
+                float: right;
+                color:$white;
+            }
+        }
+    }
+}
+
+// search modal
+
+#searchblock{
+    button.close{
+        color: $white;
+        font-size:$px_40;
+        font-weight: 300;
+        opacity: 1;
+        @include position(absolute, $top: $px_20, $right: $px_20);
+    }
+    .modal-content{
+        background: none;
+        @include position(relative);
+        form{
+           input{
+                width: $full-width;
+                background: $white;
+                border: none;
+                padding: $px_15;
+            }
+            button{
+                background:$theme-blue;
+                color: $white;
+                border: none;
+                @include padding ($px_12, $px_15, $px_12, $px_15);
+                @include position(absolute, $top: 0px, $right: 0px);
+                cursor: pointer;
+                font-size: $px_20;
+                &:hover{
+                    color: $theme-green;
+                }
+            }
+        }
+    }
+}
+
+// break point
+
+@media (max-width: 575.98px) {
+    #loginregister{
+        .logreg-detail{
+            .nav-tabs{
+                @include rotate(0deg);
+                @include position(relative, $top:22px, $right: 0px);
+                .nav-link{
+                    @include padding ( $px_5, $px_15, $px_5, $px_15 );
+                }
+                     
+            }
+        }
+           
+    }
+}

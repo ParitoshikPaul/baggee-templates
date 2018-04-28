@@ -1,0 +1,26 @@
+//Header Navigation
+
+nav.navbar{    
+    .nav-link{
+        color: $med-gray;
+        font-weight: 600;
+        cursor: pointer;
+        img{
+            margin-right: 0.2rem;
+        }
+        &:hover{
+            color: $theme-blue;
+            img{ opacity: 0.8;}
+        }
+        i{
+            color: $theme-blue;
+        }
+        .fa-search{
+            background: $theme-green;
+            @include border-radius($px_30);
+            margin: -$px_1;
+            padding: $px_8;
+            font-size: $px_14;
+        }
+    }
+}

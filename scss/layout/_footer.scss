@@ -1,0 +1,65 @@
+footer{
+    //@include border('top', $px_3, solid, $light-gray);
+    @include padding ($px_80, null, $px_5, null);
+    background: $theme-blue url(../images/footer-bg.png) repeat-x;
+    font-size: $px_13;
+    @include alpha-attribute('color', rgba($white, 0.8), $white);
+        h3{
+            color: $theme-green;
+            @include margin ($px_20, null, $px_10, null);
+            font-weight: 700;
+            font-size: $px_18;
+        }
+        a{
+            @include alpha-attribute('color', rgba($white, 0.8), $white);
+            &:hover{
+                @include alpha-attribute('color', rgba($white, 1), $white);
+                text-decoration: none;
+            }
+        }    
+    .ft-links-list{
+        p{
+            @include margin ($px_10, null, $px_10, null);
+            padding-left: $px_25;
+            i{
+                margin-left: -$px_25;
+                background:$theme-green;
+                float: left;
+                width: $px_18;
+                height: $px_18;
+                color: $theme-blue;
+                line-height: $px_18;
+                text-align: center;
+                border-radius: $px_4;
+                margin-top: $px_1;
+            }
+        }       
+        ul{
+            padding: 0px;
+            li{
+                list-style: none;
+                @include margin ($px_5, null, $px_5, null);
+            }
+        }
+        .scl{
+            a{
+                font-size: $px_24;
+                margin-right: $px_6;
+                &:hover{
+                    color: $theme-green;
+                    text-decoration: none;
+                }
+            }   
+        }
+    }
+    .ft-cpytxt{
+        @include border('top', $px_1, solid, #03335D);
+        padding-top: $px_20;
+        margin-top: $px_30;
+        img{
+            float: left;
+            margin-right: $px_10;
+            height: $px_20;
+        }
+    }
+}
